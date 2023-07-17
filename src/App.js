@@ -1,23 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const voce = [{id: 1, name: 'jabuke'}, {id: 2, name: 'kruske'}, {id: 3, name: 'sljive'}, {id: 4, name: 'visnje'}]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ol>
+      {voce.map(v=><li key={v.id}>{v.name}</li>)}
+      </ol>
     </div>
   );
 }
